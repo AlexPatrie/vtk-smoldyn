@@ -1,7 +1,7 @@
 # Crowding test
 # This tests excluded volume with reactions for surface-bound molecules
 
-graphics opengl_better
+#graphics opengl_better
 
 light room ambient 0 0 0
 light 0 position -1 1 1 0
@@ -62,8 +62,8 @@ surface_mol 250 red(up) ball sphere all
 surface_mol 5 green(up) ball sphere all
 
 #text_display time red(up) green(up)
-output_files modelout.txt
-cmd i 0 TIME_STOP 1 listmols modelout.txt
+#output_files modelout.txt
+#cmd i 0 TIME_STOP 1 listmols modelout.txt
 
 
 end_file

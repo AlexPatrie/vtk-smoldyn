@@ -47,6 +47,7 @@ setup(
         "process-bigraph",
         "pyvista",
         "pytest>=6.2.5",
-        "core-processes"
+        "core-processes",
+        "notebook"
     ]
 )
