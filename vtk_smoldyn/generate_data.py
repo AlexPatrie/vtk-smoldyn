@@ -1,4 +1,5 @@
 from smoldyn import Simulation
+import numpy as np
 
 
 def generate_molecules(model_fp: str, duration: int):
@@ -15,3 +16,17 @@ def generate_molecule_coordinates(model_fp: str, duration: int):
     for mol in data:
         mol_coords.append(mol[2:5])
     return mol_coords
+
+
+def get_axis(agent_coordinates: list[list[float]], axis: int):
+    """Return a 1d list of scalar `axis` values from the given `agent_coordinates`.
+
+        Args:
+            agent_coordinates:`str`: A list of lists where each inner list consists of [x, y, z].
+            axis:`int`: the index of the desired axis given the syntax x, y, z. Pass `0` for x,
+            `1` for y, and `2` for z.
+
+        Returns:
+            A 1d list of axis scalars
+    """
+    return np.array([agent_coord[axis] for agent_coord in agent_coordinates])
