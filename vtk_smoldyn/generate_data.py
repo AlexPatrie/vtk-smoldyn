@@ -15,7 +15,7 @@ def generate_molecule_coordinates(model_fp: str, duration: int):
     mol_coords = []
     for mol in data:
         mol_coords.append(mol[2:5])
-    return mol_coords
+    return np.array(mol_coords)
 
 
 def get_axis(agent_coordinates: list[list[float]], axis: int):
